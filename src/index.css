@@ -11,7 +11,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("./weather.jpeg") no-repeat center/cover fixed;
+  background: url("./weather1.webp") no-repeat center/cover fixed;
+}
+
+.heading {
+  margin-top: 40px;
+  color: rgb(255, 224, 224);
+}
+
+.city {
+  color: rgb(140, 120, 230);
 }
 
 code {
@@ -21,6 +30,8 @@ code {
 
 .search-box {
   height: 35px;
+  margin: 50px;
+  border-radius: 25%;
 }
 
 .temp-description {
@@ -31,4 +42,8 @@ code {
   width: 100%;
   position: absolute;
   bottom: 180px;
+}
+
+.desc {
+  color: rgb(255, 224, 224);
 }

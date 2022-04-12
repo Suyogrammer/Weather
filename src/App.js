@@ -44,31 +44,40 @@ function App() {
         />
       </div>
       <div className="city">
-        <h2>{data.name}</h2>
-      </div>
-
-      <div className="temp">
-        {data.main ? <h1>{degree(data.main.temp)} F</h1> : null}
-      </div>
-      <div className="temp-description">
-        <p>
-          {data.main ? (
-            <b>
-              {degree(data.main.feels_like)} <br /> Feels like
-            </b>
-          ) : null}
-        </p>
-        <p>
-          {data.main ? (
-            <b>
-              Wind speed: <br /> {degree(data.wind.speed)} mph
-            </b>
-          ) : null}
-        </p>
+        <h1>{data.name}</h1>
         <p>
           {data.weather ? (
             <b>
-              Weather: <br /> {degree(data.weather[0].description)}
+              {data.weather[0].main}
+              <br />
+            </b>
+          ) : null}
+        </p>
+      </div>
+
+      <div className="temp desc">
+        {data.main ? <h1>{degree(data.main.temp)} °F</h1> : null}
+      </div>
+      <div className="temp-description">
+        <p className="desc">
+          {data.main ? (
+            <b>
+              {degree(data.main.feels_like)} °F
+              <br /> Feels like
+            </b>
+          ) : null}
+        </p>
+        <p className="desc">
+          {data.wind ? (
+            <b>
+              {data.wind.speed} mph <br /> Wind speed
+            </b>
+          ) : null}
+        </p>
+        <p className="desc">
+          {data.main ? (
+            <b>
+              {data.main.humidity} <br /> Humidity{" "}
             </b>
           ) : null}
         </p>
